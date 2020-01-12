@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="vendor/semantic.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Spotify Time</title>
+</head>
+
+<body>
+    <h1>Spotify Playlist tool</h1>
+    <div style="position:absolute; top: 10px; right: 10px;">
+        <button style="display: block;" onclick="validate_google()">Validate Google</button>
+        <input style="display: block;" type="text" id="sheet-id" placeholder="Google Sheet Id">
+        <input style="display: block;" type="text" id="song" placeholder="Song">
+    </div>
+
+    <form>
+        Search it up: <input type="text" id="searchTerm">
+        <button type="button" onclick="get_playlists()">Get Playlistin'</button>
+    </form>
+    <br>
+    <div class='container'>
+        <div class='playlist-box'>
+            <img id="playlist-art"
+                src="https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-image_large.png?v=1530129081"
+                alt="">
+            <h2 id="playlist-name">Playlist Name</h2>
+            <h3><span id="followers"></span> followers</h3>
+            <h3><span id="songs"></span> songs</h3>
+            <p id="curator-name">Curator</p>
+            <br>
+            <p>Artists:</p>
+            <p id="artists">L'il P</p>
+            <br>
+            <button type="button" id="btn-next-preview">Next Preview</button>
+            <br>
+            <br>
+            <br>
+            <div class='btn-box'>
+                <button type="button" onclick="nice()">Nice</button>
+                <button type="button" onclick="nah()">Nah</button>
+            </div>
+            <audio id="track-previews" src="" autoplay></audio>
+        </div>
+    </div>
+
+    <!-- Import JS scripts -->
+    <script type="text/javascript" src="/eel.js"></script> <!-- Import eel to interact with python -->
+    <script src="vendor/semantic.min.js"></script> <!-- Import Semantic UI script -->
+    <script src="main.js"></script> <!-- Import our JS script -->
+</body>
+
+</html>
